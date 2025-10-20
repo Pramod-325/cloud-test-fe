@@ -1,18 +1,18 @@
 import { useEffect, useState } from 'react'
-
+const API_URL = import.meta.env.VITE_API_URL || '';
 function Data() {
   const [data, setData] = useState([]);
   const [ips, setIps] = useState(["test IP-1", "test IP-2"]);
   useEffect(()=>{
     const k = async()=>{
-        const res = await fetch("/api/data");
+        const res = await fetch(`${API_URL}/api/data`);
         const da = await res.json();
         console.log(da.data);
         setIps(ips.concat(da.ips))
         setData(da.data);
     };
     k();
-  },[])
+  },[API_URL])
 
   if(!data || data.length===0){
     return (

@@ -15,8 +15,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api':{
-        target: "https://iptester-be-arfuhqbmdngba5cq.southindia-01.azurewebsites.net"
-        // target:`${import.meta.env.API_ENDPINT}:${import.meta.env.PORT}`,
+        target:"http://localhost:3000",
       }
     },
   },
