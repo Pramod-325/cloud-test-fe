@@ -13,5 +13,5 @@ createRoot(document.getElementById('root')).render(
          <Route path="/data" element={<Data />} />
       </Routes>
     </Router>
-  </StrictMode>,
+  </StrictMode>
 )
