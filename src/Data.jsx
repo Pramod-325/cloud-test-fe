@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
-const API_URL = import.meta.env.VITE_API_URL || '';
+const API_URL = 'https://iptester-be-arfuhqbmdngba5cq.southindia-01.azurewebsites.net';
+// const API_URL = import.meta.env.VITE_API_URL || '';
 function Data() {
   const [data, setData] = useState([]);
   const [ips, setIps] = useState(["test IP-1", "test IP-2"]);
