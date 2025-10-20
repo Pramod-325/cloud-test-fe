@@ -1,2 +1,2 @@
 # Cloud Deployment Test
-## Beware of API KEY Handling with SWA 😅
+## Beware of API KEY Handling with SWA
