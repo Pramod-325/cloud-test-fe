@@ -3,9 +3,20 @@ const API_URL = import.meta.env.VITE_API_URL || '';
 function Data() {
   const [data, setData] = useState([]);
   const [ips, setIps] = useState(["test IP-1", "test IP-2"]);
+  const API_KEY = import.meta.env.VITE_API_KEY;
+
   useEffect(()=>{
+    if (!API_KEY && import.meta.env.PROD) {
+      setMessage('Error: API Key is missing in frontend config.');
+      return;
+    }
+
     const k = async()=>{
-        const res = await fetch(`${API_URL}/api/data`);
+        const res = await fetch(`${API_URL}/api/data`, {
+          headers: {
+            'X-Api-Key': API_KEY
+          }
+        });
         const da = await res.json();
         console.log(da.data);
         setIps(ips.concat(da.ips))
