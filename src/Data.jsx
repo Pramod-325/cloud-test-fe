@@ -7,7 +7,7 @@ function Data() {
 
   useEffect(()=>{
     if (!API_KEY && import.meta.env.PROD) {
-      setMessage('Error: API Key is missing in frontend config.');
+      alert('Error: API Key is missing in frontend config.');
       return;
     }
 
