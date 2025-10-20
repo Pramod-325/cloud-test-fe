@@ -1,2 +1,2 @@
 # Cloud Deployment Test
-## using Azure
+## Beware of API KEY Handling with SWA 😅
